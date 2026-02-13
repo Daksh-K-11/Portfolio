@@ -75,7 +75,7 @@ const Hero = () => {
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl">
             <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground tracking-tight">
-                Hi, I'm <span className="text-primary">Your Name</span>
+                Hi, I'm <span className="text-primary">Daksh Khinvasara</span>
               </h1>
             </div>
 

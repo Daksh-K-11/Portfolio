@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="text-center">
             <p className="text-muted-foreground flex items-center justify-center gap-2 text-sm">
               Made with <Heart size={14} className="text-primary fill-primary" /> by{" "}
-              <span className="font-semibold text-foreground">Your Name</span>
+              <span className="font-semibold text-foreground">Daksh Khinvasara</span>
             </p>
             <p className="text-xs text-muted-foreground mt-2">
               © {new Date().getFullYear()} All rights reserved.

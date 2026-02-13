@@ -35,12 +35,12 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 1234567890",
-      href: "tel:+911234567890",
-    },
+    // {
+    //   icon: Phone,
+    //   label: "Phone",
+    //   value: "+91 1234567890",
+    //   href: "tel:+911234567890",
+    // },
     {
       icon: Mail,
       label: "Email",
@@ -50,7 +50,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Your City, Your Country",
+      value: "Chennai, India",
       href: null,
     },
   ];
@@ -146,7 +146,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Your Name"
+                    placeholder="Your name"
                     required
                     className="bg-muted border-border"
                   />

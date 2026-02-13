@@ -8,19 +8,23 @@ const Skills = () => {
     },
     {
       title: "Backend",
-      skills: ["FastAPI", "Flask", "Node.js"],
+      skills: ["FastAPI", "Flask"],
     },
     {
       title: "Languages",
-      skills: ["JavaScript", "Python", "Java", "C", "C++"],
+      skills: ["Python", "Java", "JavaScript", "C", "C++"],
     },
     {
       title: "Databases",
       skills: ["PostgreSQL", "MySQL", "SQLite"],
     },
     {
-      title: "Tools & Others",
-      skills: ["Git", "Azure", "Numpy", "Pandas", "Scikit-learn"],
+      title: "Data and ML",
+      skills: ["Numpy", "Pandas", "Scikit-learn"],
+    },
+    {
+      title: "Tools & Deployment",
+      skills: ["Git", "Google Cloud", "Azure"],
     },
   ];
 

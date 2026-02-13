@@ -6,45 +6,45 @@ const Education = () => {
     {
       type: "education",
       icon: GraduationCap,
-      title: "Bachelor's Degree in Computer Science",
-      organization: "Your College Name",
-      period: "2020 - 2024",
-      description: "Focused on Software Engineering, Machine Learning, and Data Structures.",
+      title: "B.Tech in AI & Data Science",
+      organization: "Rajalakshmi Engineering College",
+      period: "2022 - 2027",
+      description: "Focused on Software Engineering, Machine Learning, and Data Structures",
     },
     {
       type: "education",
       icon: GraduationCap,
       title: "High School",
-      organization: "Your School Name",
-      period: "2018 - 2020",
+      organization: "Sherwood Hall Senior Secondary School",
+      period: "2008 - 2022",
       description: "Specialized in Science and Mathematics with top grades.",
     },
     {
       type: "experience",
       icon: Briefcase,
-      title: "Software Developer Intern",
-      organization: "RentMachi",
-      period: "Summer 2023",
-      description:
-        "Developed and maintained web applications using React and Node.js. Implemented new features and optimized performance.",
-    },
-    {
-      type: "experience",
-      icon: Briefcase,
       title: "Technical Lead",
-      organization: "Google Developer Group (GDG)",
-      period: "2022 - 2023",
+      organization: "Google Developer Group",
+      period: "2023",
       description:
-        "Led technical workshops and events. Mentored junior developers and organized coding competitions.",
+      "Led technical workshops and events. Mentored junior developers and organized coding competitions.",
     },
     {
       type: "experience",
       icon: Briefcase,
       title: "Core Member",
       organization: "Intellexa Tech Club",
-      period: "2021 - 2022",
+      period: "2023",
       description:
-        "Collaborated on multiple tech projects. Participated in hackathons and coding competitions.",
+      "Collaborated on multiple tech projects. Participated in hackathons and coding competitions.",
+    },
+    {
+      type: "experience",
+      icon: Briefcase,
+      title: "App Developer Intern",
+      organization: "WeDigiStudio",
+      period: "Apr 2025 - Dec 2025",
+      description:
+        "Developed and maintained web applications using React and Node.js. Implemented new features and optimized performance.",
     },
   ];
 

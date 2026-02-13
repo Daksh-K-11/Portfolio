@@ -6,36 +6,36 @@ import { ScrollReveal } from "@/hooks/useScrollAnimation";
 const Projects = () => {
   const projects = [
     {
-      title: "Spotify Clone",
-      description:
-        "A fully functional music streaming application built with React and modern web technologies. Features include playlist management, music player controls, and responsive design.",
-      tags: ["React", "JavaScript", "Tailwind CSS", "API Integration"],
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      githubUrl: "https://github.com",
-    },
-    {
       title: "Smart Classroom",
       description:
-        "An intelligent classroom management system using IoT and ML. Automates attendance, monitors environment conditions, and provides analytics for better learning outcomes.",
-      tags: ["Python", "Flask", "Machine Learning", "IoT"],
+      "An intelligent classroom management system using IoT and ML. Automates attendance, monitors environment conditions, and provides analytics for better learning outcomes.",
+      tags: ["Flutter", "Python", "Django", "IoT", "YOLOv8", "Computer Vision"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       githubUrl: null,
     },
     {
       title: "Smart Parking System",
       description:
-        "Real-time parking management solution with computer vision. Detects available parking spots, guides drivers, and provides occupancy analytics.",
-      tags: ["Python", "OpenCV", "FastAPI", "Computer Vision"],
+      "Real-time parking management solution with computer vision. Detects available parking spots, guides drivers, and provides occupancy analytics.",
+      tags: ["Flutter", "OpenCV", "Django", "Computer Vision"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       githubUrl: "https://github.com",
     },
     {
       title: "Inventory Management System",
       description:
-        "Complete inventory tracking and management application. Features real-time stock updates, automated alerts, and comprehensive reporting.",
-      tags: ["React", "Node.js", "PostgreSQL", "REST API"],
+      "Complete inventory tracking and management application. Features real-time stock updates, automated alerts, and comprehensive reporting.",
+      tags: ["Flutter", "PostgreSQL", "Django"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       githubUrl: null,
+    },
+    {
+      title: "Spotify Clone",
+      description:
+        "A fully functional music streaming application. Features include playlist management, music player controls, and responsive design.",
+      tags: ["Flutter", "Riverpod", "PostgreSQL", "FastAPI"],
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      githubUrl: "https://github.com",
     },
   ];
 
