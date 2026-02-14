@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: "Smart Classroom",
       description:
-      "An intelligent classroom management system using IoT and ML. Automates attendance, monitors environment conditions, and provides analytics for better learning outcomes.",
+      "Built a Flutter-based intelligent classroom app with AI attendance (OpenCV), YOLOv8 behavior tracking, IoT monitoring, role-based dashboards, analytics, and real-time notifications.",
       tags: ["Flutter", "Python", "Django", "IoT", "YOLOv8", "Computer Vision"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       githubUrl: null,
@@ -24,7 +24,7 @@ const Projects = () => {
     {
       title: "Inventory Management System",
       description:
-      "Complete inventory tracking and management application. Features real-time stock updates, automated alerts, and comprehensive reporting.",
+      "Developed a scalable inventory management system with QR-based stock tracking, real-time updates, automated alerts, shift optimization, and multi-branch reporting to improve efficiency and reduce costs.",
       tags: ["Flutter", "PostgreSQL", "Django"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       githubUrl: null,
@@ -32,7 +32,7 @@ const Projects = () => {
     {
       title: "Spotify Clone",
       description:
-        "A fully functional music streaming application. Features include playlist management, music player controls, and responsive design.",
+        "A fully functional music streaming application, exactly like Spotify. Features include playlist management, music player controls, and responsive design.",
       tags: ["Flutter", "Riverpod", "PostgreSQL", "FastAPI"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       githubUrl: "https://github.com",
