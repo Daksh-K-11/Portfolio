@@ -3,9 +3,45 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Card } from "./ui/card";
-import { Mail, Phone, MapPin, Linkedin, Github, Code2, Award, Send } from "lucide-react";
+import { Mail, MapPin, Send, Linkedin } from "lucide-react";
+import {
+  siGithub,
+  siLeetcode,
+  siGeeksforgeeks,
+} from "simple-icons";
 import { useToast } from "@/hooks/use-toast";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
+
+const SocialIcon = ({ icon, label }) => {
+  // Simple-icons case
+  if (icon.path) {
+    return (
+      <svg
+        role="img"
+        viewBox="0 0 24 24"
+        className="w-7 h-7 transition-all duration-300"
+        aria-label={label}
+      >
+        <path
+          d={icon.path}
+          className="fill-muted-foreground group-hover:fill-current dark:group-hover:fill-white"
+          style={{ color: `#${icon.hex}` }}
+        />
+      </svg>
+    );
+  }
+
+  // Lucide case (LinkedIn)
+  const LucideIcon = icon;
+
+  return (
+    <LucideIcon
+      className="w-7 h-7 text-muted-foreground group-hover:text-[#0A66C2] transition-all duration-300"
+      strokeWidth={2}
+    />
+  );
+};
+
 
 const Contact = () => {
   const { toast } = useToast();
@@ -35,12 +71,6 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    // {
-    //   icon: Phone,
-    //   label: "Phone",
-    //   value: "+91 1234567890",
-    //   href: "tel:+911234567890",
-    // },
     {
       icon: Mail,
       label: "Email",
@@ -57,9 +87,9 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Code2, href: "https://leetcode.com", label: "LeetCode" },
-    { icon: Award, href: "https://auth.geeksforgeeks.org", label: "GeeksforGeeks" },
+    { icon: siGithub, href: "https://github.com", label: "GitHub" },
+    { icon: siLeetcode, href: "https://leetcode.com", label: "LeetCode" },
+    { icon: siGeeksforgeeks, href: "https://auth.geeksforgeeks.org", label: "GeeksforGeeks" },
   ];
 
   return (
@@ -115,10 +145,12 @@ const Contact = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 rounded-lg border border-border bg-card/50 text-muted-foreground hover:text-primary hover:border-primary/30 hover:shadow-card transition-all duration-300"
+                      // className="p-3 rounded-lg border border-border bg-card/50 text-muted-foreground hover:text-primary hover:border-primary/30 hover:shadow-card transition-all duration-300"
+                      className="group p-4 rounded-full border border-border bg-card/50
+hover:shadow-card transition-all duration-300 hover:scale-110 hover:-translate-y-1"
                       aria-label={social.label}
                     >
-                      <social.icon size={20} />
+                      <SocialIcon icon={social.icon} label={social.label} />
                     </a>
                   ))}
                 </div>
