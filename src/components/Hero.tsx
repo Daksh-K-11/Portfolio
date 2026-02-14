@@ -1,6 +1,42 @@
 import { Button } from "./ui/button";
-import { Github, Linkedin, Code2, Award, Download, Mail } from "lucide-react";
+import {
+  siGithub,
+  siLeetcode,
+  siGeeksforgeeks,
+} from "simple-icons";
+import { Linkedin, Download, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
+
+const SocialIcon = ({ icon, label }) => {
+  // If it's a simple-icons object (has path)
+  if (icon.path) {
+    return (
+      <svg
+        role="img"
+        viewBox="0 0 24 24"
+        className="w-7 h-7 transition-all duration-300"
+        aria-label={label}
+      >
+        <path
+          d={icon.path}
+          className="fill-muted-foreground group-hover:fill-current dark:group-hover:fill-white"
+          style={{ color: `#${icon.hex}` }}
+        />
+      </svg>
+    );
+  }
+
+  // Otherwise assume it's a Lucide component
+  const LucideIcon = icon;
+
+  return (
+    <LucideIcon
+      className="w-7 h-7 text-muted-foreground group-hover:text-[#0A66C2] transition-all duration-300"
+      strokeWidth={2}
+    />
+  );
+};
+
 
 const Hero = () => {
   const socialLinks = [
@@ -10,17 +46,17 @@ const Hero = () => {
       label: "LinkedIn",
     },
     {
-      icon: Github,
+      icon: siGithub,
       href: "https://github.com",
       label: "GitHub",
     },
     {
-      icon: Code2,
+      icon: siLeetcode,
       href: "https://leetcode.com",
       label: "LeetCode",
     },
     {
-      icon: Award,
+      icon: siGeeksforgeeks,
       href: "https://auth.geeksforgeeks.org",
       label: "GeeksforGeeks",
     },
@@ -101,10 +137,12 @@ const Hero = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 md:p-4 rounded-full border border-border bg-card/50 text-muted-foreground hover:text-primary hover:border-primary/50 hover:shadow-card transition-all duration-300 hover:scale-105"
+                  className="group p-4 rounded-full border border-border bg-card/50
+hover:shadow-card transition-all duration-300 hover:scale-110
+hover:-translate-y-1"
                   aria-label={social.label}
                 >
-                  <social.icon size={20} className="md:w-5 md:h-5" />
+                  <SocialIcon icon={social.icon} label={social.label} />
                 </a>
               ))}
             </div>
