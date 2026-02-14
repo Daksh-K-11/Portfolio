@@ -115,9 +115,22 @@ const skillCategories = [
     title: "Frontend",
     skills: [
       {
+        name: "Flutter",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+        icon: SiFlutter,
+        color: "#02569B",
+      },
+      {
         name: "React",
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         darkLogo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        icon: FaReact,
+        color: "#61DAFB",
+      },
+      {
+        name: "Next",
+        logo: "https://cdn.jsdelivr.net/gh/callback-io/allogo@main/public/logos/next-js/icon.svg",
+        darkLogo: "https://cdn.jsdelivr.net/gh/callback-io/allogo@main/public/logos/next-js/icon.svg",
         icon: FaReact,
         color: "#61DAFB",
       },
@@ -126,12 +139,6 @@ const skillCategories = [
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg",
         icon: SiVite,
         color: "#646CFF",
-      },
-      {
-        name: "Flutter",
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
-        icon: SiFlutter,
-        color: "#02569B",
       },
       {
         name: "Tailwind CSS",
