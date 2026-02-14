@@ -7,7 +7,7 @@ const Achievements = () => {
     {
       title: "Smart India Hackathon Winner",
       description:
-        "Won the prestigious Smart India Hackathon 2023, competing against teams from across India. Developed an innovative solution for smart city management.",
+        "Won the prestigious Smart India Hackathon 2023, competing against teams from across India.",
       linkedinUrl: "https://linkedin.com",
       year: "2023",
       image: "/placeholder.svg",
@@ -15,7 +15,7 @@ const Achievements = () => {
     {
       title: "Hackmeggadon Champion",
       description:
-        "First place in Hackmeggadon, a 24-hour intensive hackathon. Built a revolutionary healthcare application using AI and IoT technologies.",
+        "First place in Hackmeggadon, a 24-hour intensive hackathon, among 300+ competitive teams.",
       linkedinUrl: "https://linkedin.com",
       year: "2023",
       image: "/placeholder.svg",
@@ -23,17 +23,25 @@ const Achievements = () => {
     {
       title: "Codeathon 2.0 Winner",
       description:
-        "Secured first position in Codeathon 2.0, demonstrating exceptional coding skills and problem-solving abilities in competitive programming.",
+        "Got first position in a national-level hackathon, demonstrating exceptional coding skills and problem-solving, in first year of college.",
       linkedinUrl: "https://linkedin.com",
       year: "2022",
       image: "/placeholder.svg",
     },
     {
-      title: "National Level Competition Winner",
+      title: "Conocithon 3.0 2nd Runner Up",
       description:
-        "Achieved first place in a national-level tech competition, showcasing innovative thinking and technical excellence.",
+        "Achieved 3rd place in a tech competition, showcasing innovative thinking and technical excellence.",
       linkedinUrl: "https://linkedin.com",
       year: "2022",
+      image: "/placeholder.svg",
+    },
+    {
+      title: "Codeathon 3.0 Special Prize",
+      description:
+        "Won a special prize in Codeathon 3.0 for an innovative project that stood out among hundreds of entries.",
+      linkedinUrl: "https://linkedin.com",
+      year: "2025",
       image: "/placeholder.svg",
     },
   ];
@@ -52,14 +60,14 @@ const Achievements = () => {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-8">
           {achievements.map((achievement, index) => (
             <ScrollReveal key={achievement.title} delay={index * 100} direction="up">
               <a
                 href={achievement.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block"
+                className="block w-[360px]"
               >
                 <Card className="glass-card overflow-hidden hover:shadow-card transition-all duration-300 h-full cursor-pointer group">
                   <div className="relative h-48 overflow-hidden">
