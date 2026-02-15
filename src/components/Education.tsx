@@ -40,11 +40,38 @@ const Education = () => {
     {
       type: "experience",
       icon: Briefcase,
+      title: "Free Lance",
+      // organization: "Self",
+      period: "Oct 2024 - Jan 2025",
+      description:
+        "Developed and optimized an app for a start-up from Canada from scratch",
+    },
+    {
+      type: "experience",
+      icon: Briefcase,
       title: "App Developer Intern",
       organization: "WeDigiStudio",
       period: "Apr 2025 - Dec 2025",
       description:
-        "Developed and maintained web applications using React and Node.js. Implemented new features and optimized performance.",
+        "Developed a production level app using Flutter.",
+    },
+    {
+      type: "experience",
+      icon: Briefcase,
+      title: "Free Lance",
+      // organization: "Self",
+      period: "Oct 2025 - Jan 2026",
+      description:
+        "Developed and maintained web applications for a diamond testing company",
+    },
+    {
+      type: "experience",
+      icon: Briefcase,
+      title: "Free Lance",
+      // organization: "Self",
+      period: "Jan 2026 - Feb 2026",
+      description:
+        "Developed a website for a media company - The Ravit Show, live right now, integrated and empoweered with AI",
     },
   ];
 

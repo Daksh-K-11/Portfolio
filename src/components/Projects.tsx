@@ -9,7 +9,7 @@ const Projects = () => {
       title: "Smart Classroom",
       description:
       "Built a Flutter-based intelligent classroom app with AI attendance (OpenCV), YOLOv8 behavior tracking, IoT monitoring, role-based dashboards, analytics, and real-time notifications.",
-      tags: ["Flutter", "Python", "Django", "IoT", "YOLOv8", "Computer Vision"],
+      tags: ["Flutter", "Riverpod", "Python", "Django", "IoT", "YOLOv8", "Computer Vision"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       githubUrl: null,
     },
@@ -25,7 +25,7 @@ const Projects = () => {
       title: "Inventory Management System",
       description:
       "Developed a scalable inventory management system with QR-based stock tracking, real-time updates, automated alerts, shift optimization, and multi-branch reporting to improve efficiency and reduce costs.",
-      tags: ["Flutter", "PostgreSQL", "Django"],
+      tags: ["Flutter", "Riverpod", "PostgreSQL", "Django"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       githubUrl: null,
     },
