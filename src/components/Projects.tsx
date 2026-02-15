@@ -1,14 +1,34 @@
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Github, Play } from "lucide-react";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
 import smartClassroomDark from "@/assets/projects/smart-classroom-dark.png";
+import smartClassroomLight from "@/assets/projects/smart-classroom-light.png";
+import inventoryManagementDark from "@/assets/projects/inventory-management-dark.png";
+import inventoryManagementLight from "@/assets/projects/inventory-management-light.png";
+import plantDiseaseDark from "@/assets/projects/plant-disease-detection-dark.png";
+import plantDiseaseLight from "@/assets/projects/plant-disease-detection-light.png";
+import smartParkingDark from "@/assets/projects/smart-parking-dark.png";
+import smartParkingLight from "@/assets/projects/smart-parking-light.png";
+import spotifyCloneDark from "@/assets/projects/spotify-clone-dark.png";
+import spotifyCloneLight from "@/assets/projects/spotify-clone-light.png";
 
 const Projects = () => {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   const projects = [
     {
       title: "Smart Classroom",
-      thumbnail: smartClassroomDark,
+      thumbnail: theme === "dark" ? smartClassroomDark : smartClassroomLight,
       description:
         "Built a Flutter-based intelligent classroom app with AI attendance (OpenCV), YOLOv8 behavior tracking, IoT monitoring, role-based dashboards, analytics, and real-time notifications.",
       tags: ["Flutter", "Riverpod", "Python", "Django", "IoT", "YOLOv8", "Computer Vision"],
@@ -17,6 +37,7 @@ const Projects = () => {
     },
     {
       title: "Smart Parking System",
+      thumbnail: theme === "dark" ? smartParkingDark : smartParkingLight,
       description:
         "Real-time parking management solution with computer vision. Detects available parking spots, guides drivers, and provides occupancy analytics.",
       tags: ["Flutter", "OpenCV", "Django", "Computer Vision"],
@@ -25,6 +46,8 @@ const Projects = () => {
     },
     {
       title: "Inventory Management System",
+      thumbnail:
+        theme === "dark" ? inventoryManagementDark : inventoryManagementLight,
       description:
         "Developed a scalable inventory management system with QR-based stock tracking, real-time updates, automated alerts, shift optimization, and multi-branch reporting to improve efficiency and reduce costs.",
       tags: ["Flutter", "Riverpod", "PostgreSQL", "Django"],
@@ -33,6 +56,7 @@ const Projects = () => {
     },
     {
       title: "Spotify Clone",
+      thumbnail: theme === "dark" ? spotifyCloneDark : spotifyCloneLight,
       description:
         "A fully functional music streaming application, exactly like Spotify. Features include playlist management, music player controls, and responsive design, built using MVVM architecture.",
       tags: ["Flutter", "Riverpod", "PostgreSQL", "FastAPI"],
@@ -41,14 +65,13 @@ const Projects = () => {
     },
     {
       title: "Plant Disease Detection System",
+      thumbnail: theme === "dark" ? plantDiseaseDark : plantDiseaseLight,
       description:
         "Built a deep learning-based plant disease detection system that classifies diseases across 10+ crops with over 90% accuracy. Utilizes CNN models for real-time image-based diagnosis to support smart agriculture.",
       tags: ["Python", "TensorFlow", "CNN", "Deep Learning", "Computer Vision"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       githubUrl: null,
     },
-
-
   ];
 
   return (
@@ -71,13 +94,6 @@ const Projects = () => {
               <Card className="glass-card overflow-hidden hover:shadow-card transition-all duration-300 h-full flex flex-col">
                 {/* Video Thumbnail */}
                 <div className="relative aspect-video bg-muted">
-                  {/* <iframe
-                    src={project.videoUrl}
-                    title={project.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  /> */}
                   <img
                     src={project.thumbnail}
                     alt={project.title}
