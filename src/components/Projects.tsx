@@ -28,7 +28,10 @@ const Projects = () => {
   const projects = [
     {
       title: "Smart Classroom",
-      thumbnail: theme === "dark" ? smartClassroomDark : smartClassroomLight,
+      thumbnails: {
+        dark: smartClassroomDark,
+        light: smartClassroomLight,
+      },
       description:
         "Built a Flutter-based intelligent classroom app with AI attendance (OpenCV), YOLOv8 behavior tracking, IoT monitoring, role-based dashboards, analytics, and real-time notifications.",
       tags: ["Flutter", "Riverpod", "Python", "Django", "IoT", "YOLOv8", "Computer Vision"],
@@ -37,7 +40,10 @@ const Projects = () => {
     },
     {
       title: "Smart Parking System",
-      thumbnail: theme === "dark" ? smartParkingDark : smartParkingLight,
+      thumbnails: {
+        dark: smartParkingDark,
+        light: smartParkingLight,
+      },
       description:
         "Real-time parking management solution with computer vision. Detects available parking spots, guides drivers, and provides occupancy analytics.",
       tags: ["Flutter", "OpenCV", "Django", "Computer Vision"],
@@ -46,8 +52,10 @@ const Projects = () => {
     },
     {
       title: "Inventory Management System",
-      thumbnail:
-        theme === "dark" ? inventoryManagementDark : inventoryManagementLight,
+      thumbnails: {
+        dark: inventoryManagementDark,
+        light: inventoryManagementLight,
+      },
       description:
         "Developed a scalable inventory management system with QR-based stock tracking, real-time updates, automated alerts, shift optimization, and multi-branch reporting to improve efficiency and reduce costs.",
       tags: ["Flutter", "Riverpod", "PostgreSQL", "Django"],
@@ -56,7 +64,10 @@ const Projects = () => {
     },
     {
       title: "Spotify Clone",
-      thumbnail: theme === "dark" ? spotifyCloneDark : spotifyCloneLight,
+      thumbnails: {
+        dark: spotifyCloneDark,
+        light: spotifyCloneLight,
+      },
       description:
         "A fully functional music streaming application, exactly like Spotify. Features include playlist management, music player controls, and responsive design, built using MVVM architecture.",
       tags: ["Flutter", "Riverpod", "PostgreSQL", "FastAPI"],
@@ -65,7 +76,10 @@ const Projects = () => {
     },
     {
       title: "Plant Disease Detection System",
-      thumbnail: theme === "dark" ? plantDiseaseDark : plantDiseaseLight,
+      thumbnails: {
+        dark: plantDiseaseDark,
+        light: plantDiseaseLight,
+      },
       description:
         "Built a deep learning-based plant disease detection system that classifies diseases across 10+ crops with over 90% accuracy. Utilizes CNN models for real-time image-based diagnosis to support smart agriculture.",
       tags: ["Python", "TensorFlow", "CNN", "Deep Learning", "Computer Vision"],
@@ -88,19 +102,29 @@ const Projects = () => {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-8">
           {projects.map((project, index) => (
             <ScrollReveal key={project.title} delay={index * 100} direction="up">
-              <Card className="glass-card overflow-hidden hover:shadow-card transition-all duration-300 h-full flex flex-col">
+              <Card className="glass-card w-[360px] overflow-hidden hover:shadow-card transition-all duration-300 h-full flex flex-col">
                 {/* Video Thumbnail */}
                 <div className="relative aspect-video bg-muted">
+                  {/* Light Image */}
                   <img
-                    src={project.thumbnail}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
+                    src={project.thumbnails.light}
+                    alt={`${project.title} light`}
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${theme === "light" ? "opacity-100" : "opacity-0"
+                      }`}
                   />
 
+                  {/* Dark Image */}
+                  <img
+                    src={project.thumbnails.dark}
+                    alt={`${project.title} dark`}
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${theme === "dark" ? "opacity-100" : "opacity-0"
+                      }`}
+                  />
                 </div>
+
 
                 <div className="p-6 flex-1 flex flex-col">
                   <h3 className="text-xl font-semibold mb-3 text-foreground">
