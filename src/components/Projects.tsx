@@ -2,13 +2,15 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Github, Play } from "lucide-react";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
+import smartClassroomDark from "@/assets/projects/smart-classroom-dark.png";
 
 const Projects = () => {
   const projects = [
     {
       title: "Smart Classroom",
+      thumbnail: smartClassroomDark,
       description:
-      "Built a Flutter-based intelligent classroom app with AI attendance (OpenCV), YOLOv8 behavior tracking, IoT monitoring, role-based dashboards, analytics, and real-time notifications.",
+        "Built a Flutter-based intelligent classroom app with AI attendance (OpenCV), YOLOv8 behavior tracking, IoT monitoring, role-based dashboards, analytics, and real-time notifications.",
       tags: ["Flutter", "Riverpod", "Python", "Django", "IoT", "YOLOv8", "Computer Vision"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       githubUrl: null,
@@ -16,7 +18,7 @@ const Projects = () => {
     {
       title: "Smart Parking System",
       description:
-      "Real-time parking management solution with computer vision. Detects available parking spots, guides drivers, and provides occupancy analytics.",
+        "Real-time parking management solution with computer vision. Detects available parking spots, guides drivers, and provides occupancy analytics.",
       tags: ["Flutter", "OpenCV", "Django", "Computer Vision"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       githubUrl: "https://github.com",
@@ -24,7 +26,7 @@ const Projects = () => {
     {
       title: "Inventory Management System",
       description:
-      "Developed a scalable inventory management system with QR-based stock tracking, real-time updates, automated alerts, shift optimization, and multi-branch reporting to improve efficiency and reduce costs.",
+        "Developed a scalable inventory management system with QR-based stock tracking, real-time updates, automated alerts, shift optimization, and multi-branch reporting to improve efficiency and reduce costs.",
       tags: ["Flutter", "Riverpod", "PostgreSQL", "Django"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       githubUrl: null,
@@ -32,11 +34,21 @@ const Projects = () => {
     {
       title: "Spotify Clone",
       description:
-        "A fully functional music streaming application, exactly like Spotify. Features include playlist management, music player controls, and responsive design.",
+        "A fully functional music streaming application, exactly like Spotify. Features include playlist management, music player controls, and responsive design, built using MVVM architecture.",
       tags: ["Flutter", "Riverpod", "PostgreSQL", "FastAPI"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       githubUrl: "https://github.com",
     },
+    {
+      title: "Plant Disease Detection System",
+      description:
+        "Built a deep learning-based plant disease detection system that classifies diseases across 10+ crops with over 90% accuracy. Utilizes CNN models for real-time image-based diagnosis to support smart agriculture.",
+      tags: ["Python", "TensorFlow", "CNN", "Deep Learning", "Computer Vision"],
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      githubUrl: null,
+    },
+
+
   ];
 
   return (
@@ -59,13 +71,19 @@ const Projects = () => {
               <Card className="glass-card overflow-hidden hover:shadow-card transition-all duration-300 h-full flex flex-col">
                 {/* Video Thumbnail */}
                 <div className="relative aspect-video bg-muted">
-                  <iframe
+                  {/* <iframe
                     src={project.videoUrl}
                     title={project.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className="w-full h-full"
+                  /> */}
+                  <img
+                    src={project.thumbnail}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
                   />
+
                 </div>
 
                 <div className="p-6 flex-1 flex flex-col">
