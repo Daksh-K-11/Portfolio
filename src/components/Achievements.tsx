@@ -1,6 +1,11 @@
 import { Card } from "./ui/card";
 import { Trophy, ExternalLink } from "lucide-react";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
+import  sih  from "@/assets/achievements/sih.jpg";
+import  codeathon2  from "@/assets/achievements/codeathon-2-win.jpg";
+import  codetahonSpecialPrize  from "@/assets/achievements/codeathon-special-prize.jpg";
+import  conocithon  from "@/assets/achievements/conocithon-3.jpg";
+import  hackmeggadon  from "@/assets/achievements/hackmeggadon.jpg";
 
 const Achievements = () => {
   const achievements = [
@@ -8,41 +13,41 @@ const Achievements = () => {
       title: "Smart India Hackathon Winner",
       description:
         "Won the prestigious Smart India Hackathon 2023, competing against teams from across India.",
-      linkedinUrl: "https://linkedin.com",
+      linkedinUrl: "https://www.linkedin.com/posts/daksh-khinvasara_im-overjoyed-to-announce-that-my-team-and-activity-7274033261922689024-2mZE",
       year: "2023",
-      image: "/placeholder.svg",
+      image: sih,
     },
     {
       title: "Hackmeggadon Champion",
       description:
         "First place in Hackmeggadon, a 24-hour intensive hackathon, among 300+ competitive teams.",
-      linkedinUrl: "https://linkedin.com",
+      linkedinUrl: "https://www.linkedin.com/posts/daksh-khinvasara_over-the-moon-to-share-that-our-team-emerged-activity-7229462130331111424-MQIK",
       year: "2023",
-      image: "/placeholder.svg",
+      image: hackmeggadon,
     },
     {
       title: "Codeathon 2.0 Winner",
       description:
         "Got first position in a national-level hackathon, demonstrating exceptional coding skills and problem-solving, in first year of college.",
-      linkedinUrl: "https://linkedin.com",
+      linkedinUrl: "https://www.linkedin.com/posts/daksh-khinvasara_hey-everyone-we-participated-and-won-1st-activity-7177611814526988288-aDIo",
       year: "2022",
-      image: "/placeholder.svg",
+      image: codeathon2,
     },
     {
       title: "Conocithon 3.0 2nd Runner Up",
       description:
         "Achieved 3rd place in a tech competition, showcasing innovative thinking and technical excellence.",
-      linkedinUrl: "https://linkedin.com",
+      linkedinUrl: "https://www.linkedin.com/posts/daksh-khinvasara_proud-to-announce-that-we-secured-3rd-place-activity-7240702183199928321-ZJ1M",
       year: "2022",
-      image: "/placeholder.svg",
+      image: conocithon,
     },
     {
       title: "Codeathon 3.0 Special Prize",
       description:
         "Won a special prize in Codeathon 3.0 for an innovative project that stood out among hundreds of entries.",
-      linkedinUrl: "https://linkedin.com",
+      linkedinUrl: "https://www.linkedin.com/posts/daksh-khinvasara_exactly-a-year-ago-this-very-hackathon-marked-activity-7311731362938376192-l0hm",
       year: "2025",
-      image: "/placeholder.svg",
+      image: codetahonSpecialPrize,
     },
   ];
 
@@ -76,10 +81,6 @@ const Achievements = () => {
                       alt={achievement.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-                    <div className="absolute top-4 right-4 p-2 bg-primary/10 backdrop-blur-sm rounded-lg border border-primary/20">
-                      <Trophy size={20} className="text-primary" />
-                    </div>
                   </div>
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-2">
