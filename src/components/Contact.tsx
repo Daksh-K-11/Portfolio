@@ -4,7 +4,7 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Card } from "./ui/card";
 import { Mail, MapPin, Send } from "lucide-react";
-import socialLinks from "@/lib/social-llinks";
+import socialLinks from "@/lib/social-links";
 import SocialIcon  from "./ui/social-icon";
 import { useToast } from "@/hooks/use-toast";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";

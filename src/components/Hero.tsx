@@ -1,7 +1,8 @@
 import { Button } from "./ui/button";
 import { Download, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
-import socialLinks from "@/lib/social-llinks";
+import dakshImage from "@/assets/about/daksh.jpg";
+import socialLinks from "@/lib/social-links";
 import SocialIcon  from "./ui/social-icon";
 
 
@@ -45,7 +46,7 @@ const Hero = () => {
           <div className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-border shadow-card">
               <img
-                src="/placeholder.svg"
+                src={dakshImage}
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
