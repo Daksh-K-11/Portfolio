@@ -5,13 +5,14 @@ import { Textarea } from "./ui/textarea";
 import { Card } from "./ui/card";
 import { Mail, MapPin, Send } from "lucide-react";
 import socialLinks from "@/lib/social-links";
-import SocialIcon  from "./ui/social-icon";
+import SocialIcon from "./ui/social-icon";
 import { useToast } from "@/hooks/use-toast";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
 
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,14 +20,39 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setIsLoading(true);
+
+    try {
+      const res = await fetch("https://Daksh11.pythonanywhere.com/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
+
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -192,9 +218,40 @@ hover:shadow-card transition-all duration-300 hover:scale-110 hover:-translate-y
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full">
+                {/* <Button type="submit" size="lg" className="w-full">
                   <Send className="mr-2" size={18} />
                   Send Message
+                </Button> */}
+                <Button type="submit" size="lg" className="w-full" disabled={isLoading}>
+                  {isLoading ? (
+                    <>
+                      <svg
+                        className="animate-spin mr-2 h-5 w-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                          fill="none"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                        />
+                      </svg>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-2" size={18} />
+                      Send Message
+                    </>
+                  )}
                 </Button>
               </form>
             </Card>
