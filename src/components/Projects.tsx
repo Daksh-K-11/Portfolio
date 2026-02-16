@@ -35,7 +35,7 @@ const Projects = () => {
       description:
         "Built a Flutter-based intelligent classroom app with AI attendance (OpenCV), YOLOv8 behavior tracking, IoT monitoring, role-based dashboards, analytics, and real-time notifications.",
       tags: ["Flutter", "Riverpod", "Python", "Django", "IoT", "YOLOv8", "Computer Vision"],
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: null,
       githubUrl: null,
     },
     {
@@ -47,8 +47,8 @@ const Projects = () => {
       description:
         "Real-time parking management solution with computer vision. Detects available parking spots, guides drivers, and provides occupancy analytics.",
       tags: ["Flutter", "OpenCV", "Django", "Computer Vision"],
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      githubUrl: "https://github.com",
+      videoUrl: null,
+      githubUrl: "https://github.com/Daksh-K-11/Smart-Parking-System",
     },
     {
       title: "Inventory Management System",
@@ -60,7 +60,7 @@ const Projects = () => {
         "Developed a scalable inventory management system with QR-based stock tracking, real-time updates, automated alerts, shift optimization, and multi-branch reporting to improve efficiency and reduce costs.",
       tags: ["Flutter", "Riverpod", "PostgreSQL", "Django"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      githubUrl: null,
+      githubUrl: "https://github.com/Daksh-K-11/Inventory-Management-App",
     },
     {
       title: "Spotify Clone",
@@ -72,7 +72,7 @@ const Projects = () => {
         "A fully functional music streaming application, exactly like Spotify. Features include playlist management, music player controls, and responsive design, built using MVVM architecture.",
       tags: ["Flutter", "Riverpod", "PostgreSQL", "FastAPI"],
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      githubUrl: "https://github.com",
+      githubUrl: "https://github.com/Daksh-K-11/Spotify-Clone",
     },
     {
       title: "Plant Disease Detection System",
@@ -83,8 +83,8 @@ const Projects = () => {
       description:
         "Built a deep learning-based plant disease detection system that classifies diseases across 10+ crops with over 90% accuracy. Utilizes CNN models for real-time image-based diagnosis to support smart agriculture.",
       tags: ["Python", "TensorFlow", "CNN", "Deep Learning", "Computer Vision"],
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      githubUrl: null,
+      videoUrl: null,
+      githubUrl: "https://github.com/Daksh-K-11/Plant-Disease-Detection",
     },
   ];
 
