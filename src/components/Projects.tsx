@@ -59,7 +59,7 @@ const Projects = () => {
       description:
         "Developed a scalable inventory management system with QR-based stock tracking, real-time updates, automated alerts, shift optimization, and multi-branch reporting to improve efficiency and reduce costs.",
       tags: ["Flutter", "Riverpod", "PostgreSQL", "Django"],
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: null,
       githubUrl: "https://github.com/Daksh-K-11/Inventory-Management-App",
     },
     {
@@ -147,40 +147,47 @@ const Projects = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-3">
-                    {project.githubUrl && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        asChild
-                        className="flex-1"
-                      >
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                  {/* Action Buttons */}
+                  {(project.githubUrl || project.videoUrl) && (
+                    <div className="flex gap-3">
+                      {project.githubUrl && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          asChild
+                          className={project.videoUrl ? "flex-1" : "w-full"}
                         >
-                          <Github className="mr-2" size={16} />
-                          Code
-                        </a>
-                      </Button>
-                    )}
-                    <Button
-                      variant="default"
-                      size="sm"
-                      asChild
-                      className={project.githubUrl ? "flex-1" : "w-full"}
-                    >
-                      <a
-                        href={project.videoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Play className="mr-2" size={16} />
-                        Watch Demo
-                      </a>
-                    </Button>
-                  </div>
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="mr-2" size={16} />
+                            Code
+                          </a>
+                        </Button>
+                      )}
+
+                      {project.videoUrl && (
+                        <Button
+                          variant="default"
+                          size="sm"
+                          asChild
+                          className={project.githubUrl ? "flex-1" : "w-full"}
+                        >
+                          <a
+                            href={project.videoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Play className="mr-2" size={16} />
+                            Watch Demo
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  )}
+
                 </div>
               </Card>
             </ScrollReveal>
