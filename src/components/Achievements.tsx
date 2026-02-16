@@ -14,7 +14,7 @@ const Achievements = () => {
       description:
         "Won the prestigious Smart India Hackathon 2023, competing against teams from across India.",
       linkedinUrl: "https://www.linkedin.com/posts/daksh-khinvasara_im-overjoyed-to-announce-that-my-team-and-activity-7274033261922689024-2mZE",
-      year: "2023",
+      year: "2024",
       image: sih,
     },
     {
@@ -22,7 +22,7 @@ const Achievements = () => {
       description:
         "First place in Hackmeggadon, a 24-hour intensive hackathon, among 300+ competitive teams.",
       linkedinUrl: "https://www.linkedin.com/posts/daksh-khinvasara_over-the-moon-to-share-that-our-team-emerged-activity-7229462130331111424-MQIK",
-      year: "2023",
+      year: "2024",
       image: hackmeggadon,
     },
     {
@@ -30,7 +30,7 @@ const Achievements = () => {
       description:
         "Got first position in a national-level hackathon, demonstrating exceptional coding skills and problem-solving, in first year of college.",
       linkedinUrl: "https://www.linkedin.com/posts/daksh-khinvasara_hey-everyone-we-participated-and-won-1st-activity-7177611814526988288-aDIo",
-      year: "2022",
+      year: "2023",
       image: codeathon2,
     },
     {
@@ -38,7 +38,7 @@ const Achievements = () => {
       description:
         "Achieved 3rd place in a tech competition, showcasing innovative thinking and technical excellence.",
       linkedinUrl: "https://www.linkedin.com/posts/daksh-khinvasara_proud-to-announce-that-we-secured-3rd-place-activity-7240702183199928321-ZJ1M",
-      year: "2022",
+      year: "2024",
       image: conocithon,
     },
     {

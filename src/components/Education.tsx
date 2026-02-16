@@ -8,7 +8,7 @@ const Education = () => {
       icon: GraduationCap,
       title: "B.Tech in AI & Data Science",
       organization: "Rajalakshmi Engineering College",
-      period: "2022 - 2027",
+      period: "2023 - 2027",
       description: "Focused on Software Engineering, Machine Learning, and Data Structures",
     },
     {
@@ -16,7 +16,7 @@ const Education = () => {
       icon: GraduationCap,
       title: "High School",
       organization: "Sherwood Hall Senior Secondary School",
-      period: "2008 - 2022",
+      period: "2008 - 2023",
       description: "Specialized in Science and Mathematics with top grades.",
     },
     {
@@ -24,7 +24,7 @@ const Education = () => {
       icon: Briefcase,
       title: "Technical Lead",
       organization: "Google Developer Group",
-      period: "2023",
+      period: "2024",
       description:
       "Led technical workshops and events. Mentored junior developers and organized coding competitions.",
     },
@@ -33,7 +33,7 @@ const Education = () => {
       icon: Briefcase,
       title: "Core Member",
       organization: "Intellexa Tech Club",
-      period: "2023",
+      period: "2024",
       description:
       "Collaborated on multiple tech projects. Participated in hackathons and coding competitions.",
     },
