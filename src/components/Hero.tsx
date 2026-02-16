@@ -4,18 +4,19 @@ import heroImage from "@/assets/hero-bg.jpg";
 import dakshImage from "@/assets/about/daksh.jpg";
 import socialLinks from "@/lib/social-links";
 import SocialIcon  from "./ui/social-icon";
+import resumePDF from "@/assets/about/daksh-resume.pdf";
 
 
 const Hero = () => {
   
   const handleDownloadCV = () => {
-    const link = document.createElement("a");
-    link.href = "/cv.pdf";
-    link.download = "CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const link = document.createElement("a");
+  link.href = resumePDF;
+  link.download = "Daksh_Khinvasara_Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   const scrollToContact = () => {
     document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
@@ -108,12 +109,6 @@ hover:-translate-y-1"
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-muted-foreground/50 rounded-full" />
-        </div>
-      </div>
     </section>
   );
 };
