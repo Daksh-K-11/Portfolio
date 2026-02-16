@@ -1,67 +1,12 @@
 import { Button } from "./ui/button";
-import {
-  siGithub,
-  siLeetcode,
-  siGeeksforgeeks,
-} from "simple-icons";
-import { Linkedin, Download, Mail } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
-
-const SocialIcon = ({ icon, label }) => {
-  // If it's a simple-icons object (has path)
-  if (icon.path) {
-    return (
-      <svg
-        role="img"
-        viewBox="0 0 24 24"
-        className="w-7 h-7 transition-all duration-300"
-        aria-label={label}
-      >
-        <path
-          d={icon.path}
-          className="fill-muted-foreground group-hover:fill-current dark:group-hover:fill-white"
-          style={{ color: `#${icon.hex}` }}
-        />
-      </svg>
-    );
-  }
-
-  // Otherwise assume it's a Lucide component
-  const LucideIcon = icon;
-
-  return (
-    <LucideIcon
-      className="w-7 h-7 text-muted-foreground group-hover:text-[#0A66C2] transition-all duration-300"
-      strokeWidth={2}
-    />
-  );
-};
+import socialLinks from "@/lib/social-llinks";
+import SocialIcon  from "./ui/social-icon";
 
 
 const Hero = () => {
-  const socialLinks = [
-    {
-      icon: Linkedin,
-      href: "https://linkedin.com",
-      label: "LinkedIn",
-    },
-    {
-      icon: siGithub,
-      href: "https://github.com",
-      label: "GitHub",
-    },
-    {
-      icon: siLeetcode,
-      href: "https://leetcode.com",
-      label: "LeetCode",
-    },
-    {
-      icon: siGeeksforgeeks,
-      href: "https://auth.geeksforgeeks.org",
-      label: "GeeksforGeeks",
-    },
-  ];
-
+  
   const handleDownloadCV = () => {
     const link = document.createElement("a");
     link.href = "/cv.pdf";

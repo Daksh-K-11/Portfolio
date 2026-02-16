@@ -3,44 +3,11 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Card } from "./ui/card";
-import { Mail, MapPin, Send, Linkedin } from "lucide-react";
-import {
-  siGithub,
-  siLeetcode,
-  siGeeksforgeeks,
-} from "simple-icons";
+import { Mail, MapPin, Send } from "lucide-react";
+import socialLinks from "@/lib/social-llinks";
+import SocialIcon  from "./ui/social-icon";
 import { useToast } from "@/hooks/use-toast";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
-
-const SocialIcon = ({ icon, label }) => {
-  // Simple-icons case
-  if (icon.path) {
-    return (
-      <svg
-        role="img"
-        viewBox="0 0 24 24"
-        className="w-7 h-7 transition-all duration-300"
-        aria-label={label}
-      >
-        <path
-          d={icon.path}
-          className="fill-muted-foreground group-hover:fill-current dark:group-hover:fill-white"
-          style={{ color: `#${icon.hex}` }}
-        />
-      </svg>
-    );
-  }
-
-  // Lucide case (LinkedIn)
-  const LucideIcon = icon;
-
-  return (
-    <LucideIcon
-      className="w-7 h-7 text-muted-foreground group-hover:text-[#0A66C2] transition-all duration-300"
-      strokeWidth={2}
-    />
-  );
-};
 
 
 const Contact = () => {
@@ -85,12 +52,6 @@ const Contact = () => {
     },
   ];
 
-  const socialLinks = [
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: siGithub, href: "https://github.com", label: "GitHub" },
-    { icon: siLeetcode, href: "https://leetcode.com", label: "LeetCode" },
-    { icon: siGeeksforgeeks, href: "https://auth.geeksforgeeks.org", label: "GeeksforGeeks" },
-  ];
 
   return (
     <section id="contact" className="py-24 relative">
