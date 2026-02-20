@@ -43,6 +43,27 @@ const Services = () => {
     },
   ];
 
+  const testimonials = [
+    {
+      name: "Ravit Jain",
+      role: "Founder and CEO, The Ravit Show",
+      initials: "RJ",
+      text: "Working with Daksh was an absolute pleasure. He’s proactive, solution-oriented, and always comes prepared with thoughtful ideas instead of just highlighting problems. What I appreciated most was his willingness to go the extra mile and experiment to see what truly works. I’m extremely happy with the outcome and would highly recommend him.",
+    },
+    {
+      name: "Prince Jain",
+      role: "Co-Founder, JP Diamond Labs",
+      initials: "PJ",
+      text: "From the moment our website launched, clients have remarked on how professional and trustworthy it feels. Daksh created a clear, elegant layout with detailed, easy-to-understand information. He exceeded our expectations, and we are truly delighted with the outcome.",
+    },
+    {
+      name: "Cyril Praveen",
+      // role: "Founder, StartupXYZ",
+      initials: "CP",
+      text: "Working with Daksh was a great experience. He quickly understood our startup’s needs,  and delivered a solution that fit perfectly. What really stood out was his speed and quality of his execution. He’s proactive, adaptable, and genuinely takes ownership. The quality he delivers at his stage is impressive, and I’d happily work with him again.",
+    },
+  ];
+
   return (
     <section id="services" className="py-24 relative">
       <div className="container mx-auto px-6">
@@ -87,48 +108,30 @@ const Services = () => {
           </ScrollReveal>
 
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Sarah Johnson",
-                role: "Product Manager, TechCorp",
-                initials: "SJ",
-                text: "Exceptional attention to detail and a deep understanding of modern web technologies. Delivered our project ahead of schedule with outstanding quality.",
-              },
-              {
-                name: "Michael Chen",
-                role: "CTO, StartupXYZ",
-                initials: "MC",
-                text: "A rare combination of technical excellence and clear communication. The ML solution built for us significantly improved our prediction accuracy.",
-              },
-              {
-                name: "Emily Davis",
-                role: "Lead Designer, CreativeHub",
-                initials: "ED",
-                text: "Translates design intent into pixel-perfect interfaces effortlessly. A pleasure to collaborate with on every project.",
-              },
-            ].map((testimonial, index) => (
-              <ScrollReveal key={testimonial.name} delay={index * 100} direction="up">
-                <Card className="glass-card p-6 h-full flex flex-col justify-between">
-                  <div>
-                    <Quote size={20} className="text-primary/40 mb-3" />
-                    <p className="text-sm text-muted-foreground leading-relaxed italic">
-                      "{testimonial.text}"
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-3 mt-5 pt-4 border-t border-border">
-                    <Avatar className="h-9 w-9">
-                      <AvatarFallback className="text-xs font-semibold bg-primary/10 text-primary">
-                        {testimonial.initials}
-                      </AvatarFallback>
-                    </Avatar>
+            {
+              testimonials.map((testimonial, index) => (
+                <ScrollReveal key={testimonial.name} delay={index * 100} direction="up">
+                  <Card className="glass-card p-6 h-full flex flex-col justify-between">
                     <div>
-                      <p className="text-sm font-medium text-foreground">{testimonial.name}</p>
-                      <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                      <Quote size={20} className="text-primary/40 mb-3" />
+                      <p className="text-base text-muted-foreground leading-relaxed italic">
+                        "{testimonial.text}"
+                      </p>
                     </div>
-                  </div>
-                </Card>
-              </ScrollReveal>
-            ))}
+                    <div className="flex items-center gap-3 mt-5 pt-4 border-t border-border">
+                      <Avatar className="h-9 w-9">
+                        <AvatarFallback className="text-xs font-semibold bg-primary/10 text-primary">
+                          {testimonial.initials}
+                        </AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <p className="text-sm font-medium text-foreground">{testimonial.name}</p>
+                        <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                      </div>
+                    </div>
+                  </Card>
+                </ScrollReveal>
+              ))}
           </div>
         </div>
       </div>
