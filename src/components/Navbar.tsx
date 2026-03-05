@@ -56,9 +56,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-sm" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen
+          ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-sm"
+          : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -85,15 +86,13 @@ const Navbar = () => {
                     e.preventDefault();
                     scrollToSection(item.href);
                   }}
-                  className={`text-sm font-medium transition-colors relative group ${
-                    isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
-                  }`}
+                  className={`text-sm font-medium transition-colors relative group ${isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                    }`}
                 >
                   {item.label}
                   <span
-                    className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
-                      isActive ? "w-full" : "w-0 group-hover:w-full"
-                    }`}
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
                   />
                 </a>
               );
@@ -135,9 +134,8 @@ const Navbar = () => {
                     e.preventDefault();
                     scrollToSection(item.href);
                   }}
-                  className={`text-sm font-medium transition-colors py-2 ${
-                    isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
-                  }`}
+                  className={`text-sm font-medium transition-colors py-2 ${isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                    }`}
                 >
                   {item.label}
                 </a>
