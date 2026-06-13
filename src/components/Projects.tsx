@@ -4,16 +4,16 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Github, Play } from "lucide-react";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
-import smartClassroomDark from "@/assets/projects/smart-classroom-dark.png";
-import smartClassroomLight from "@/assets/projects/smart-classroom-light.png";
-import inventoryManagementDark from "@/assets/projects/inventory-management-dark.png";
-import inventoryManagementLight from "@/assets/projects/inventory-management-light.png";
-import plantDiseaseDark from "@/assets/projects/plant-disease-detection-dark.png";
-import plantDiseaseLight from "@/assets/projects/plant-disease-detection-light.png";
-import smartParkingDark from "@/assets/projects/smart-parking-dark.png";
-import smartParkingLight from "@/assets/projects/smart-parking-light.png";
-import spotifyCloneDark from "@/assets/projects/spotify-clone-dark.png";
-import spotifyCloneLight from "@/assets/projects/spotify-clone-light.png";
+import smartClassroomDark from "@/assets/projects/smart-classroom-dark.webp";
+import smartClassroomLight from "@/assets/projects/smart-classroom-light.webp";
+import inventoryManagementDark from "@/assets/projects/inventory-management-dark.webp";
+import inventoryManagementLight from "@/assets/projects/inventory-management-light.webp";
+import plantDiseaseDark from "@/assets/projects/plant-disease-detection-dark.webp";
+import plantDiseaseLight from "@/assets/projects/plant-disease-detection-light.webp";
+import smartParkingDark from "@/assets/projects/smart-parking-dark.webp";
+import smartParkingLight from "@/assets/projects/smart-parking-light.webp";
+import spotifyCloneDark from "@/assets/projects/spotify-clone-dark.webp";
+import spotifyCloneLight from "@/assets/projects/spotify-clone-light.webp";
 
 const Projects = () => {
   const { theme } = useTheme();
