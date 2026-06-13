@@ -58,7 +58,7 @@ const Services = () => {
     },
     {
       name: "Cyril Praveen",
-      // role: "Founder, StartupXYZ",
+      role: "ERP & Process Optimization Speciaist",
       initials: "CP",
       text: "Working with Daksh was a great experience. He quickly understood our startup’s needs,  and delivered a solution that fit perfectly. What really stood out was his speed and quality of his execution. He’s proactive, adaptable, and genuinely takes ownership. The quality he delivers at his stage is impressive, and I’d happily work with him again.",
     },
